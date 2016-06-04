@@ -15,7 +15,7 @@
  ** the GNU General Public License for more details.
  **
  ** You should have received a copy of the GNU General Public License
- ** along with this program;  if not, write to the Free Software 
+ ** along with this program;  if not, write to the Free Software
  ** Foundation, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
@@ -23,25 +23,25 @@
 
 Timer::Timer()
 {
-	frames=0;
-	update_time=1000;
-	last_time=0;
-	FPS=0;
+    frames=0;
+    update_time=1000;
+    last_time=0;
+    FPS=0;
 }
 
 void Timer::update()
 {
-	frames++;
+    frames++;
 
-	if(GetTickCount()-last_time > update_time) 
-	{
-		FPS=((double)frames/(double)(GetTickCount()-last_time))*1000.0; 
-		last_time=GetTickCount();
-		frames=0;
-	}
+//	if(GetTickCount()-last_time > update_time)
+//	{
+//		FPS=((double)frames/(double)(GetTickCount()-last_time))*1000.0;
+//		last_time=GetTickCount();
+//		frames=0;
+//	}
 }
 
 double Timer::get_fps()
 {
-	return FPS;
+    return FPS;
 }

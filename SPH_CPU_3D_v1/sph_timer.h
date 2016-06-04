@@ -15,27 +15,27 @@
  ** the GNU General Public License for more details.
  **
  ** You should have received a copy of the GNU General Public License
- ** along with this program;  if not, write to the Free Software 
+ ** along with this program;  if not, write to the Free Software
  ** Foundation, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
 #ifndef __SPHTIMER_H__
 #define __SPHTIMER_H__
 
-#include <windows.h>
+//#include <windows.h>
 
 class Timer
 {
 private:
-	int frames;
-	int update_time;
-	int last_time;
-	double FPS;
+    int frames;
+    int update_time;
+    int last_time;
+    double FPS;
 
 public:
-	Timer();
-	void update();
-	double get_fps();
+    Timer();
+    void update();
+    double get_fps();
 };
 
 #endif
